@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,6 +7,9 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>$(AssemblyName)</Title>
     <Authors>Nathan Leal Cantamissa</Authors>
+    <Description>Easy way to configure Jwt and Swagger options on program</Description>
+    <RepositoryUrl>https://github.com/NathanCantamissa/Nlc.ProgramCs.Config</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
