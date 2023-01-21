@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 namespace Nlc.ProgramCs.Config.Swagger
@@ -11,9 +12,9 @@ namespace Nlc.ProgramCs.Config.Swagger
         /// <param name="services">Just to set the extension method</param>
         /// <param name="name">SwaggerDoc name parameter</param>
         /// <param name="openApiInfo">OpenApiInfo class, to set the parameters as you desire</param>
-        public static void AddSwaggerBearerConfig(this IServiceCollection services, string name, OpenApiInfo openApiInfo)
+        public static void AddSwaggerBearerConfig(this WebApplicationBuilder builder, string name, OpenApiInfo openApiInfo)
         {
-            services.AddSwaggerGen(option =>
+            builder.Services.AddSwaggerGen(option =>
             {
                 option.SwaggerDoc(name, openApiInfo);
                 option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

@@ -7,12 +7,13 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>$(AssemblyName)</Title>
     <Authors>Nathan Leal Cantamissa</Authors>
-    <Description>Easy way to configure Jwt and Swagger options on program</Description>
+    <Description>Easy way to configure Jwt , Swagger, FluentValidation and AutoMapper on program.cs</Description>
     <RepositoryUrl>https://github.com/NathanCantamissa/Nlc.ProgramCs.Config</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,11 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
   </ItemGroup>
 
 </Project>
